@@ -9,24 +9,38 @@
 <body>
 <script>
 
+gameStart();
+
+function gameStart(){
+    
+    shuffleCards();
+
+}
+
 function setDifficulty(Easy, Intermediate, Hard){
 
     if(Easy(clicked)){
 
         setTimer(easy);
+
         setGrid(easy);
+
         setWagerMulti(easy);
 
     } else if(Intermediate(clicked)){
        
         setTimer(intermediate);
+
         setGrid(intermediate);
+
         setWagerMulti(intermediate);
 
     } else if(Hard(clicked)) {
 
         setTimer(Hard);
+
         setGrid(Hard);
+
         setWagerMulti(Hard);
 
     } else {
@@ -70,11 +84,43 @@ function setGrid(threebythree, sixbysix, ninebynine){
     }
 }
 
+function shuffleCards(){
 
+}
 
+function setWager(amount){
+    
+    if(accountBalance(cash) < setWager(amount)){
 
+    alert("Please Set A Bet Amount That You Can Pay If You Lose");
 
+    } else {
 
+        setWager(amount) = wager(betAmount)
+    }
+
+}
+
+function wager(betAmount){
+
+    if(gameOutcome(win)){
+
+        let cash = betAmount * betMulti;
+
+    } else if(gameOutcome(lose)){
+
+        let cash = cash - betAmount;
+
+    } else {
+
+        let cash = cash;
+    }
+
+}
+
+function gameOutcome(win, lose){
+
+}
 
 
 
