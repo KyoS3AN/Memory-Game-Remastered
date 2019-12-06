@@ -7,14 +7,12 @@
     <title>Meme Memory</title>
     <h1 style="text-align:center; color:crimson;">Meme Memory Game</h1>
     <div style="text-align: center;">
-            <button type="button" onclick="alert('Welcome To The Meme Memory Game')">Click to start!</button>
+            <button type="button" onclick="alert('Welcome To The Meme Memory Game'); startGame(); recieveCandy();">Click to start!</button>
         </div>
 
  </head>
 <body>
 <script>
-
-startGame();
 
 function setDifficulty(Easy, Intermediate, Hard){
 
@@ -25,7 +23,6 @@ function setDifficulty(Easy, Intermediate, Hard){
         setGrid(easy);
 
         setWagerMulti(easy);
-
 
     } else if(Intermediate(clicked)){
        
@@ -84,9 +81,6 @@ function setGrid(threebythree, sixbysix, ninebynine){
     }
 }
 
-function shuffleCards(){
-}
-
 function setWager(amount){
     
     if(accountBalance(cash) < setWager(amount)){
@@ -138,7 +132,11 @@ function leaderBoard(){
 
 }
 
+function startGame(){
 
+    shuffleDeck();
+
+}
 
 
 
