@@ -53,21 +53,36 @@ function setDifficulty(Easy, Intermediate, Hard){
     }
 }
 
-function setTimer(min1sec30, min3, min5){
+var second = 0, minute = 0;
 
-    if(setDifficulty(Easy)){
+var timer = document.querySelector(".timer");
 
-        setTimer(min1sec30);
+var interval;
 
-    } else if(setDifficulty(Intermediate)){
-        
-        setTimer(min3);
+function setTimer(){
 
-    } else if(setDifficulty(Hard)){
+    interval = setInterval(function(){
 
-        setTimer(min5);
+        timer.innerHTML = minute+"mins "+second+"secs";
 
-    } 
+        second++;
+
+        if(second == 60){
+
+            minute++;
+
+            second = 0;
+
+        }
+
+        if(minute == 60){
+
+            hour++;
+
+            minute = 0;
+        }
+
+    },1000);
 }
 
 function setGrid(threebythree, sixbysix, ninebynine){
@@ -142,6 +157,12 @@ function startGame(){
 
     shuffleDeck();
 
+    setTimer();
+
+    setWager();
+
+    setGrid();
+
 }
 
 function shuffleDeck(){
@@ -152,7 +173,22 @@ function accountBalance(cash){
 
 }
 
+function checkMoves(){
+    
+    moves++;
 
+    counter.innerHTML = moves;
+
+    if(moves == 1){
+        second = 0;
+
+        minute = 0;
+
+        hour = 0;
+
+        startTimer();
+    }
+}
 
 
 
