@@ -9,6 +9,18 @@
     <div style="text-align: center;">
             <button type="button" onclick="alert('Welcome To The Meme Memory Game'); startGame(); recieveCandy();">Click to start!</button>
         </div>
+        
+<h1 style="text-align: center;">Hello There!</h1>
+<div style="text-align: center;">
+        <button type="button" onclick="myFunction()">Click for memes</button>
+    </div>
+<script>
+function myFunction() {
+  document.body.style.backgroundColor = "#f3f3f3";
+  document.body.style.backgroundImage = "url('img_tree.png')";
+}
+</script>
+
 
  </head>
 <body>
@@ -140,16 +152,36 @@ function startGame(){
 
 
 
+</script>
+
+<style type="text/css">
+    body{
+        margin: 0px; padding: 0px; overflow: hidden;
+        background: rgb(43, 214, 226);
+    }
+    #canvas-holder.active {
+        position: absolute;
+        padding: 0px;
+        left: 100%;
+        top: 100%;
+    }
+    #canvas-holder.inactive {
+        position: absolute;
+        top:50%;
+        width: 100%;
+        text-align: center;
+    }
+    #canvas {
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+        color: rgb(255, 255, 255);
+        font-size: 40px;
+    }
 
 
 
-
-
-
-
-
-
-
+</style>
 
 
 
