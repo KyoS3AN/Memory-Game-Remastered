@@ -195,7 +195,7 @@ start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Meme  Memory</title>
-    <h1 style="text-align:center; color:crimson;">Meme Memory Game</h1>
+    <h1 style="text-align:center; color:black;">Meme Memory Game</h1>
     <div style="text-align: center;">
             <button type="button" onclick="alert('Welcome To The Meme Memory Game'); startGame();">Click to start!</button>
         </div>
@@ -204,8 +204,6 @@ start();
 </head>
 <body>
 
-<h1>Our Meme Memory</h1>
-
 <div class="wrapper">
     <div class="easyGameboard">
 
@@ -213,18 +211,54 @@ start();
             <div id="c1"></div>
             <div id="c2"></div>
             <div id="c3"></div>
-        </div>
-
-        <div class="Row2">
             <div id="c4"></div>
             <div id="c5"></div>
             <div id="c6"></div>
         </div>
 
+        <div class="Row2">
+          <div id="c7"></div>
+          <div id="c8"></div>
+          <div id="c9"></div>
+          <div id="c10"></div>
+          <div id="c11"></div>
+          <div id="c12"></div>
+        </div>
+
         <div class="Row3">
-            <div id="c7"></div>
-            <div id="c8"></div>
-            <div id="c9"></div>
+          <div id="c13"></div>
+          <div id="c14"></div>
+          <div id="c15"></div>
+          <div id="c16"></div>
+          <div id="c17"></div>
+          <div id="c18"></div>
+        </div>
+
+        <div class="Row4">
+          <div id="c19"></div>
+          <div id="c20"></div>
+          <div id="c21"></div>
+          <div id="c22"></div>
+          <div id="c23"></div>
+          <div id="c24"></div>
+        </div>
+
+        <div class="Row5">
+          <div id="c25"></div>
+          <div id="c26"></div>
+          <div id="c27"></div>
+          <div id="c28"></div>
+          <div id="c29"></div>
+          <div id="c30"></div>
+        </div>
+        
+        <div class="Row6">
+          <div id="c31"></div>
+          <div id="c32"></div>
+          <div id="c33"></div>
+          <div id="c34"></div>
+          <div id="c35"></div>
+          <div id="c36"></div>
         </div>
 
     </div>
@@ -236,109 +270,150 @@ start();
         height:300px;
         border:3px solid white;
         z-index: 1;
-
     }
-
     .wrapper {
-        width: 800px;
+        width: 1000px;
         margin:0 auto;
     }
-
     .row1, .row2, .row3 {
         clear:both;
-
     }
-
-    #c1,#c2,#c3 {
-
-    width:200px;
-    height:200px;
+    #c1,#c2,#c3,#c4,#c5,#c6 {
+    width:150px;
+    height:150px;
     border:3px solid black;
     float: left;
-
     }
-
-    #c4,#c5,#c6 {
-
-    width:200px;
-    height:200px;
+    #c7,#c8,#c9,#c10,#c11,#c12 {
+    width:150px;
+    height:150px;
     border:3px solid black;
     float: left;
-
     }
-
-    #c7,#c8,#c9 {
-
-    width:200px;
-    height:200px;
+    #c13,#c14,#c15,#c16,#c17,#c18 {
+    width:150px;
+    height:150px;
     border:3px solid black;
     float: left;
-
+    }
+    #c19,#c20,#c21,#c22,#c23,#c24 {
+    width:150px;
+    height:150px;
+    border:3px solid black;
+    float: left;
+    }
+    #c25,#c26,#c27,#c28,#c29,#c30 {
+    width:150px;
+    height:150px;
+    border:3px solid black;
+    float: left;
+    }
+    #c31,#c32,#c33,#c34,#c35,#c36 {
+    width:150px;
+    height:150px;
+    border:3px solid black;
+    float: left;
     }
 
-    .flip-card {
-  background-color: transparent;
-  width: 200px;
-  height: 200px;
-  perspective: 1000px;
-}
+  </style>
+  <script>
 
-.flip-card-inner {
-  position: absolute;
-  left: 3px;
-  top: 3px;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
+document.body.onload = startGame();
 
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
+  let card = document.getElementsByClassName("card");
+  let cards = [];
+  const deck = document.getElementById("card-deck");
+  let moves = 0;
+  let counter = document.queryselector(".moves");
+  var flippedCards = [];
+  
+  function shuffle(deckOfCards) {
+    var currentCards = array.length, temporaryValue, randomCards;
 
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
+    while (currentCards !== 0) {
+      randomCards = Math.floor(Math.random() * currentCards);
+      currentCards -= 1;
+      temporaryValue = array[currentCards];
+      array[currentCards] = array[randomCards];
+      array[randomCards] = temporaryValue;
+    }
 
-.flip-card-front {
-  background-color: #bbb;
-  color: black;
-}
+    return array;
+  };
+  
+  function startGame(){
 
-.flip-card-back {
-  background-color: #2980b9;
-  color: white;
-  transform: rotateY(180deg);
-}
-</style>
-</head>
-<body>
+    flippedCards = [];
 
-<div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <h1>Not A Gamer</h1>
-    </div>
-    <div class="flip-card-back">
-      <h1>Gamer</h1> 
-      <p></p> 
-      <p></p>
-    </div>
-  </div>
-</div>
-    </style>
+    cards = shuffle(cards);
+    for (var i = 0; i < cards.length; i++){
+      deck.innerHTML = "";
+      [].forEach.call(cards, function(item) {
+        deck.appendChild(item);
+      });
+      cards[i].classList.remove("show", "open", "match", "disabled");
+    }
+    moves = 0;
+    counter.innerHTML = moves;
+    second = 0;
+    minute = 0;
+    hour = 0;
+    var timer = documetn.queryselector(".timer");
+    timer.innerHTML = "0 mins 0 secs";
+    clearInterval(interval);
+  }
+  
+  function matchedCards(){
+    flippedCards[0].classList.add("match","disabled");
+    flippedCards[1].classList.add("match","disabled");
+    flippedCards[0].classList.remove("show","open","no-event");
+    flippedCards[1].classList.remove("show","open","no-event");
+    flippedCards = [];
+  }
 
-<script>
+  function unmatchedCards(){
+    flippedCards[0].classList.add("unmatched");
+    flippedCards[1].classList.add("unmatched");
+    disable();
+    setTimeout(function(){
+      flippedCards[0].classList.remove("show","open","no-event","unmatched");
+      flippedCards[1].classList.remove("show","open","no-event","unmatched");
+    enable();
+    flippedCards = [];
+    },1100);
+  }
 
+  function enable(){
 
+  }
 
-</script>
+  function disable(){
+
+  }
+  
+  var displayCard = function (){
+    this.classList.toggle("open");
+    this.classList.toggle("show");
+    this.classList.toggle("disabled");
+  };
+  
+  function cardFlip(){
+    flippedCards.push(this);
+    var len = flippedCards.length;
+    if(len === 2){
+      moveCounter();
+      if(flippedCards[0].type === flippedCards[1].type){
+        matchedCards();
+      } else {
+        unmatchedCards();
+      }
+    }
+  };
+  
+  
+  
+  
+  </script>
 </body>
 </html>
 >>>>>>> 580c9ebff8973887b7afda90d18ea88f15b132a7
