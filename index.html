@@ -1,209 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<<<<<<< HEAD
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Meme Memory</title>
-  <link rel = "stylesheet" href="css/style.css" />
-
-</head>
-<body>
-<div id="Game"></div>
-<html></html>
-<script>
-
-    function start() {
-        setDifficulty();
-        setTimer();
-        setGrid();
-    }
-
-function setDifficulty(Easy, Intermediate, Hard){
-    if(Easy(clicked)){
-        setTimer(easy);
-        setGrid(easy);
-        setWagerMulti(easy);
-    } else if(Intermediate(clicked)){
-       
-        setTimer(intermediate);
-        setGrid(intermediate);
-        setWagerMulti(intermediate);
-    } else if(Hard(clicked)) {
-        setTimer(Hard);
-        setGrid(Hard);
-        setWagerMulti(Hard);
-    } else {
-        alert("Please, Choose A Difficulty")
-    }
-}
-function setTimer(min1sec30, min3, min5){
-    if(setDifficulty(Easy)){
-        setTimer(min1sec30);
-    } else if(setDifficulty(Intermediate)){
-        
-        setTimer(min3);
-    } else if(setDifficulty(Hard)){
-        setTimer(min5);
-    } 
-}
-function setGrid(threebythree, sixbysix, ninebynine){
-    if(setDifficulty(Easy)){
-        setGrid(threebythree);
-    } else if(setDifficulty(Intermediate)){
-        setGrid(sixbysix);
-    } else if(setDifficulty(Hard)){
-        setGrid(ninebynine);
-    }
-}
-const cardsArray = [
-    {
-    'name': 'hand',
-    'img':'Me Me&#39;s_0001.png',
-    },
-    {
-    'name': 'pikachu',
-    'img': 'Me Me&#39;s_0002.png',
-    },
-    {
-    'name': 'stonks',
-    'img': 'Me Me&#39;s_0003.png',
-    },
-    {
-    'name': 'Sponge',
-    'img': 'Me Me&#39;s_0004.png',
-    },
-    {
-    'name': 'Thanos',
-    'img': 'Me Me&#39;s_0005.png',
-    },
-    {
-    'name': 'Sanic',
-    'img': 'Me Me&#39;s_0006.png',
-    },
-    {
-    'name': 'Doge',
-    'img': 'Me Me&#39;s_0007.png',
-    },
-    {
-    'name': 'Speed',
-    'img': 'Me Me&#39;s_0008.png',
-    },
-    {
-    'name': 'Cat',
-    'img': 'Me Me&#39;s_0009.png',
-    },
-    {
-    'name': 'Jerry',
-    'img': 'Me Me&#39;s_0010.png',
-    },
-    {
-    'name': 'Confused',
-    'img': 'Me Me&#39;s_0011.png',
-    },
-    {
-    'name': ' Doubt',
-    'img': 'Me Me&#39;s_0012.png',
-    },
-    {
-    'name': 'Kronk' ,
-    'img': 'Me Me&#39;s_0013.png',
-    },
-    {
-    'name': 'Mocking',
-    'img': 'Me Me&#39;s_0014.png',
-    },
-    {
-    'name': 'Villager',
-    'img': 'sdsdfsdf.png',
-    },
-    {
-    'name' : 'Patrick',
-    'img' : 'erttre.png',
-    },
-]
-this.init = function(){
-    var sprite  = new sprite('images/back.png');
-    var card = new SceneObject(sprite);
-    wade.addSceneObject(card);
-};
-<table id="gameboard">
-    <tr>
-        <td id="c-1-1"></td>
-        <td id="c-1-2"></td>
-        <td id="c-1-3"></td>
-        <td id="c-1-4"></td>
-        <td id="c-1-5"></td>
-        <td id="c-1-6"></td>
-        <td id="c-1-7"></td>
-    </tr>
-    <tr>
-        <td id="c-2-1"></td>
-        <td id="c-2-2"></td>
-        <td id="c-2-3"></td>
-        <td id="c-2-4"></td>
-        <td id="c-2-5"></td>
-        <td id="c-2-6"></td>
-        <td id="c-2-7"></td>
-    </tr>
-    <tr>
-        <td id="c-3-1"></td>
-        <td id="c-3-2"></td>
-        <td id="c-3-3"></td>
-        <td id="c-3-4"></td>
-        <td id="c-3-5"></td>
-        <td id="c-3-6"></td>
-        <td id="c-3-7"></td>
-    </tr>
-    <tr>
-        <td id="c-4-1"></td>
-        <td id="c-4-2"></td>
-        <td id="c-4-3"></td>
-        <td id="c-4-4"></td>
-        <td id="c-4-5"></td>
-        <td id="c-4-6"></td>
-        <td id="c-4-7"></td>
-    </tr>
-    <tr>
-        <td id="c-5-1"></td>
-        <td id="c-5-2"></td>
-        <td id="c-5-3"></td>
-        <td id="c-5-4"></td>
-        <td id="c-5-5"></td>
-        <td id="c-5-6"></td>
-        <td id="c-5-7"></td>
-    </tr>
-    <tr>
-        <td id="c-6-1"></td>
-        <td id="c-6-2"></td>
-        <td id="c-6-3"></td>
-        <td id="c-6-4"></td>
-        <td id="c-6-5"></td>
-        <td id="c-6-6"></td>
-        <td id="c-6-7"></td>
-    </tr>
-</table>
-start();
-</script>  
-          
-
-</html> 
-</body>
-=======
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Meme  Memory</title>
+    <title>Meme Memory</title>
     <h1 style="text-align:center; color:black;">Meme Memory Game</h1>
     <div style="text-align: center;">
-            <button type="button" onclick="alert('Welcome To The Meme Memory Game'); startGame();">Click to start!</button>
         </div>
         <link rel="stylesheet" type="text/css" href="style.css">
-
-</head>
 <body>
 
+  
 <div class="wrapper">
     <div class="easyGameboard">
 
@@ -265,6 +72,128 @@ start();
 
 <style>
 
+  html {
+    box-sizing: border-box;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background: #ffffff;
+    font-family: 'Times New Roman', cursive;
+    font-size: 16px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .deck {
+    width: 85%;
+    background: #716F71;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 8px 9px 26px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 0 3em;
+  }
+
+  .deck .card {
+    height: 3.7rem;
+    width: 3.7rem;
+    margin: 0.2rem 0.2rem;
+    background: #141214;;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  }
+
+  .deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+    animation-name: flipInY;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+  }
+
+  .deck .card.show {
+    font-size: 33px;
+  }
+
+  .deck .card.match {
+    cursor: default;
+    background: Green;
+    font-size: 33px;
+    animation-name: rubberBand;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+  }
+
+  .deck .card.unmatched {
+    animation-name: pulse;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    animation-duration: .75s;
+    background: Crimson;
+  }
+
+  .deck .card.disabled {
+    pointer-events: none;
+    opacity: 0.9;
+  }
+
+  @keyframes flipInY {
+    from {
+      transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+      animation-timing-function: ease-in;
+      opacity: 0;
+    }
+
+    40% {
+      transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+      animation-timing-function: ease-in;
+    }
+
+    60% {
+      transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+      opacity: 1;
+    }
+
+    80% {
+      transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    }
+
+    to {
+      transform: perspective(400px);
+    }
+  }
+
     .gameboard {
         width: 330px;
         height:300px;
@@ -275,7 +204,7 @@ start();
         width: 1000px;
         margin:0 auto;
     }
-    .row1, .row2, .row3 {
+    .row1, .row2, .row3, .row4, .row5, .row6 {
         clear:both;
     }
     #c1,#c2,#c3,#c4,#c5,#c6 {
@@ -315,8 +244,10 @@ start();
     float: left;
     }
 
+    
   </style>
   <script>
+
 
 document.body.onload = startGame();
 
@@ -326,7 +257,47 @@ document.body.onload = startGame();
   let moves = 0;
   let counter = document.queryselector(".moves");
   var flippedCards = [];
-  
+  var second = 0, minute = 0; hour = 0;
+  var timer = document.querySelector(".timer");
+  var interval;
+
+  for (var i = 0; i < cards.length; i++){
+    card = cards[i];
+    card.addEventListener("click", displayCard);
+    card.addEventListener("click", cardOpen);
+  }
+
+  function moveCounter(){
+    moves++;
+    counter.innerHTML = moves;
+    if (moves == 1){
+      second = 0;
+      minute = 0;
+      hour = 0;
+      startTimer();
+    }
+  }
+
+  function startTimer(){
+    interval = setInterval(function(){
+      timer.innerHTML = minute+ "mins "+second+"secs";
+      second++;
+      if(second == 60){
+        minute++;
+        second = 0;
+      }
+      if(minute == 60){
+        hour ++;
+        minute = 0;
+      }
+    },1000);
+  }
+
+  function playAgain(){
+    modal.classList.remove("show");
+    startGame();
+  }
+
   function shuffle(deckOfCards) {
     var currentCards = array.length, temporaryValue, randomCards;
 
@@ -384,11 +355,18 @@ document.body.onload = startGame();
   }
 
   function enable(){
-
+    Array.prototype.filter.call(cards, function(card){
+      card.classList.remove('disabled');
+      for(var i = 0; i < matchedCards.length; i++){
+        matchedCard[i].classList.add('disabled');
+      }
+    });
   }
 
   function disable(){
-
+    Array.prototype.filter.call(cards, function(card){
+      card.classList.add('disabled');
+    });
   }
   
   var displayCard = function (){
@@ -413,7 +391,7 @@ document.body.onload = startGame();
   
   
   
+  
   </script>
 </body>
 </html>
->>>>>>> 580c9ebff8973887b7afda90d18ea88f15b132a7
