@@ -3,75 +3,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Meme Memory</title>
-    <h1 style="text-align:center; color:black;">Meme Memory Game</h1>
+    <title>Meme Memory Game</title>
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Permanent+Marker" >
+    <h1 style="text-align:center; color:black;">Meme
+       Memory</h1>
     <div style="text-align: center;">
         </div>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css">
 <body>
-
-  
-<div class="wrapper">
-    <div class="easyGameboard">
-
-        <div class="Row1">
-            <div id="c1"></div>
-            <div id="c2"></div>
-            <div id="c3"></div>
-            <div id="c4"></div>
-            <div id="c5"></div>
-            <div id="c6"></div>
-        </div>
-
-        <div class="Row2">
-          <div id="c7"></div>
-          <div id="c8"></div>
-          <div id="c9"></div>
-          <div id="c10"></div>
-          <div id="c11"></div>
-          <div id="c12"></div>
-        </div>
-
-        <div class="Row3">
-          <div id="c13"></div>
-          <div id="c14"></div>
-          <div id="c15"></div>
-          <div id="c16"></div>
-          <div id="c17"></div>
-          <div id="c18"></div>
-        </div>
-
-        <div class="Row4">
-          <div id="c19"></div>
-          <div id="c20"></div>
-          <div id="c21"></div>
-          <div id="c22"></div>
-          <div id="c23"></div>
-          <div id="c24"></div>
-        </div>
-
-        <div class="Row5">
-          <div id="c25"></div>
-          <div id="c26"></div>
-          <div id="c27"></div>
-          <div id="c28"></div>
-          <div id="c29"></div>
-          <div id="c30"></div>
-        </div>
-        
-        <div class="Row6">
-          <div id="c31"></div>
-          <div id="c32"></div>
-          <div id="c33"></div>
-          <div id="c34"></div>
-          <div id="c35"></div>
-          <div id="c36"></div>
-        </div>
-
-    </div>
-
+  <section class="deck">
+    <div class=".card" data-framework="Ight imma head out">
+      <img class="front-face" src="Ight imma head out.jpg" alt="Heading Out">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="Ight imma head out">
+       <img class="front-face" src="Ight imma head out.jpg" alt="Heading Out">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="Ight imma head out">
+       <img class="front-face" src="Ight imma head out.jpg" alt="Heading Out">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="">
+       <img class="front-face" src="" alt="">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="">
+       <img class="front-face" src="" alt="">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="">
+       <img class="front-face" src="" alt="">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="">
+       <img class="front-face" src="" alt="">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="">
+       <img class="front-face" src="" alt="">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="">
+       <img class="front-face" src="" alt="">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="">
+       <img class="front-face" src="" alt="">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="">
+       <img class="front-face" src="" alt="">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   
+    <div class=".card" data-framework="">
+       <img class="front-face" src="" alt="">
+       <img class="back-face" src="" alt="Memory Card">
+     </div>
+   </section>
 <style>
-
+  
   html {
     box-sizing: border-box;
   }
@@ -103,7 +107,7 @@
     flex-direction: column;
   }
   
-  .deck {
+    .deck {
     width: 85%;
     background: #716F71;
     padding: 1rem;
@@ -147,7 +151,7 @@
 
   .deck .card.match {
     cursor: default;
-    background: Green;
+    background: #E5F720;
     font-size: 33px;
     animation-name: rubberBand;
     -webkit-backface-visibility: visible !important;
@@ -160,7 +164,7 @@
     -webkit-backface-visibility: visible !important;
     backface-visibility: visible !important;
     animation-duration: .75s;
-    background: Crimson;
+    background: #e2043b;
   }
 
   .deck .card.disabled {
@@ -168,31 +172,64 @@
     opacity: 0.9;
   }
 
+
   @keyframes flipInY {
     from {
       transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
       animation-timing-function: ease-in;
       opacity: 0;
     }
-
     40% {
       transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
       animation-timing-function: ease-in;
     }
-
     60% {
       transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
       opacity: 1;
     }
-
     80% {
       transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
     }
-
     to {
       transform: perspective(400px);
     }
   }
+
+  @keyframes rubberBand {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+	65% {
+		transform: scale3d(.95, 1.05, 1);
+	}
+	75% {
+		transform: scale3d(1.05, .95, 1);
+	}
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(1.2, 1.2, 1.2);
+	}
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
 
     .gameboard {
         width: 330px;
@@ -204,62 +241,22 @@
         width: 1000px;
         margin:0 auto;
     }
-    .row1, .row2, .row3, .row4, .row5, .row6 {
-        clear:both;
-    }
-    #c1,#c2,#c3,#c4,#c5,#c6 {
-    width:150px;
-    height:150px;
-    border:3px solid black;
-    float: left;
-    }
-    #c7,#c8,#c9,#c10,#c11,#c12 {
-    width:150px;
-    height:150px;
-    border:3px solid black;
-    float: left;
-    }
-    #c13,#c14,#c15,#c16,#c17,#c18 {
-    width:150px;
-    height:150px;
-    border:3px solid black;
-    float: left;
-    }
-    #c19,#c20,#c21,#c22,#c23,#c24 {
-    width:150px;
-    height:150px;
-    border:3px solid black;
-    float: left;
-    }
-    #c25,#c26,#c27,#c28,#c29,#c30 {
-    width:150px;
-    height:150px;
-    border:3px solid black;
-    float: left;
-    }
-    #c31,#c32,#c33,#c34,#c35,#c36 {
-    width:150px;
-    height:150px;
-    border:3px solid black;
-    float: left;
-    }
 
     
   </style>
   <script>
 
-
-document.body.onload = startGame();
-
   let card = document.getElementsByClassName("card");
   let cards = [];
   const deck = document.getElementById("card-deck");
   let moves = 0;
-  let counter = document.queryselector(".moves");
+  let counter = document.querySelector(".moves");
   var flippedCards = [];
   var second = 0, minute = 0; hour = 0;
   var timer = document.querySelector(".timer");
   var interval;
+
+  document.body.onload = startGame();
 
   for (var i = 0; i < cards.length; i++){
     card = cards[i];
@@ -298,7 +295,7 @@ document.body.onload = startGame();
     startGame();
   }
 
-  function shuffle(deckOfCards) {
+  function shuffle(array) {
     var currentCards = array.length, temporaryValue, randomCards;
 
     while (currentCards !== 0) {
@@ -324,13 +321,12 @@ document.body.onload = startGame();
       });
       cards[i].classList.remove("show", "open", "match", "disabled");
     }
+
     moves = 0;
-    counter.innerHTML = moves;
     second = 0;
     minute = 0;
     hour = 0;
-    var timer = documetn.queryselector(".timer");
-    timer.innerHTML = "0 mins 0 secs";
+    var timer = document.querySelector(".timer");
     clearInterval(interval);
   }
   
@@ -387,11 +383,7 @@ document.body.onload = startGame();
       }
     }
   };
-  
-  
-  
-  
-  
+
   </script>
 </body>
 </html>
