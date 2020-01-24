@@ -425,7 +425,7 @@
   function cardFlip(){
     flippedCards.push(this);
     var len = flippedCards.length;
-    if(len === 2){
+    if(len === 3){
       moveCounter();
       if(flippedCards[0].type === flippedCards[1].type === flippedCards[2].type){
         matchedCards();
